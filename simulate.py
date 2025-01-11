@@ -74,7 +74,7 @@ def get_potential(sim, sim_obj):
         
           return potential
       
-      elif sim in ['lennard-jones']:
+      elif sim in ['jones']:
          
           potential = bounded_dist**(-12)-bounded_dist**(-6)
 
