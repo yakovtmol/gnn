@@ -80,7 +80,8 @@ def get_potential(sim, sim_obj):
           # return (bounded_dist - 1)**2 + x1[1]*x1[-1]
       
       elif sim == 'buck':
-          return float(math.exp(-bounded_dist)) - 1/(bounded_dist)**6
+          expon = float(math.exp(bounded_dist))
+          return 1/expon - 1/(bounded_dist)**6
       
       elif sim == 'jones':
          
