@@ -73,8 +73,11 @@ def get_potential(sim, sim_obj):
               potential += -m1*m2/bounded_dist
         
           return potential
+        
+      elif sim == 'lol':
+          return (bounded_dist - 1)**2 + x1[1]*x1[-1]
       
-      elif sim in ['jones']:
+      elif sim == 'jones':
          
           potential = bounded_dist**(-12)-bounded_dist**(-6)
 
