@@ -1,3 +1,4 @@
+import math
 import jax
 from jax import ops
 from jax import numpy as np
@@ -77,6 +78,9 @@ def get_potential(sim, sim_obj):
       elif sim == 'lol':
           return 1/(bounded_dist)**9 - 1/(bounded_dist)**6
           # return (bounded_dist - 1)**2 + x1[1]*x1[-1]
+      
+      elif sim == 'buck':
+          return math.exp(-bounded_dist) - 1/(bounded_dist)**6
       
       elif sim == 'jones':
          
